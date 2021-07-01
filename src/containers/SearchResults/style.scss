@@ -1,0 +1,21 @@
+.search-title {
+  font-family: 'Neo Sans Pro';
+  display: flex;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 5px;
+  .search-title__count {
+    color: #c82832;
+  }
+  .search-title__text {
+    font-weight: 900;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.separator {
+  border: 1px solid #4e5360;
+}

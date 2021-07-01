@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('./styles/fonts/avenirnext.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('./styles/fonts/neosans.ttf') format('truetype');
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f5f6fa;
+  font-family: 'Avenir Next LT Pro';
+}
