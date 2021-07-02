@@ -16,8 +16,6 @@ class API {
 
   getSearchResult = (query, currentPage, pageSize) =>
     this.http.get(
-	
-	
       `${API_ROUTES.searchResults}?&search=${query}&page=${currentPage}&pageSize=${pageSize}`
     );
 }
