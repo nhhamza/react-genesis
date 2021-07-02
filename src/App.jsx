@@ -5,13 +5,14 @@ import ROUTES from './constants/routes';
 
 const App = () => {
   return (
-    <>
+    <div className="page-container">
+      <Header />
       <Switch>
         {ROUTES.map(route => (
           <Route key={route} {...route} />
         ))}
       </Switch>
-    </>
+    </div>
   );
 };
 
