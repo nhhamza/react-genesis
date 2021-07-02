@@ -119,7 +119,6 @@ const SearchResults = () => {
         loader={printLoader()}
         threshold={200}
       >
-        <Header />
         <Grid container spacing={2} className={classes.resultsContainer}>
           <Grid item xs={12}>
             <div className="search-title">
