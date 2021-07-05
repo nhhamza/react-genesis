@@ -11,17 +11,16 @@ import {
   LinearProgress
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Header from '../../components/Header/Header';
 import beerIcon from '../../assets/images/beer-icon.png';
 import coffeeIcon from '../../assets/images/coffee-icon.png';
 import cocktailIcon from '../../assets/images/cocktail-icon.png';
 import milkshakeIcon from '../../assets/images/milkshake-icon.png';
 import greenCommentIcon from '../../assets/images/comment-green.png';
 import commentIcon from '../../assets/images/comment.png';
-import api from '../../api/api.jsx';
 import styles from './style';
 import t from '../../constants/translates';
 import './style.scss';
+import { getSearchData } from '../../Repository/SearchResult/SearchResult';
 
 const TOTAL_ITEMS_COUNT = 8; // should be received from the api
 const PAGE_SIZE = 2;
@@ -46,7 +45,8 @@ const SearchResults = () => {
     }
     setIsLoading(true);
     setCurrentPage(currentPage + 1);
-    api.getSearchResult(query, currentPage, PAGE_SIZE).then(response => {
+
+    getSearchData(query, currentPage, PAGE_SIZE).then(response => {
       if (currentPage === 1) {
         setDrinks(response.data);
       } else {
@@ -119,7 +119,6 @@ const SearchResults = () => {
         loader={printLoader()}
         threshold={200}
       >
-        <Header />
         <Grid container spacing={2} className={classes.resultsContainer}>
           <Grid item xs={12}>
             <div className="search-title">

@@ -18,3 +18,11 @@ body,
   background-color: #f5f6fa;
   font-family: 'Avenir Next LT Pro';
 }
+
+.page-container {
+  margin: 0 auto;
+  max-width: 640px;
+  margin-bottom: 100px;
+  min-height: 100%;
+  padding: 10px 30px;
+}
