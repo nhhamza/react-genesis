@@ -9,7 +9,9 @@ const Search = () => {
   return (
     <div className="main">
       <div className="title">
-        <div className="title_text">{t.search.title}</div>
+        <div className="title_text">
+          <h2>{t.search.title}</h2>
+        </div>
       </div>
       <div className="inputDiv">
         <input type="text" placeholder="Numéro d'écrou ou nom" />
