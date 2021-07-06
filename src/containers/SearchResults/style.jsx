@@ -1,7 +1,8 @@
 const styles = () => ({
   resultsContainer: {
-    margin: '1px',
-    width: '100%'
+    margin: '0 auto',
+    width: '100%',
+    display: 'block'
   },
   typeIcon: {
     height: '74px'

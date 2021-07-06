@@ -1,21 +1,33 @@
-.search-title {
-  font-family: 'Neo Sans Pro';
+.result__container__card {
+  height: 62px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin: 10px 0px;
   display: flex;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 5px;
-  .search-title__count {
-    color: #c82832;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  &__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
   }
-  .search-title__text {
-    font-weight: 900;
-    margin-left: 5px;
-    margin-right: 5px;
+  &__body {
+    width: 100%;
+    &__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__phone {
+      font-size: 14px;
+      line-height: 18px;
+      color: #445062;
+    }
   }
-}
-
-.separator {
-  border: 1px solid #4e5360;
+  &__navigation {
+    width: 30px;
+  }
 }
