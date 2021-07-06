@@ -11,6 +11,9 @@ export default new LocalizedStrings({
     searchResults: {
       results: 'RESULTS : '
     },
-    client: {}
+    client: {},
+    search: {
+      title: 'Livret du détenu'
+    }
   }
 });
