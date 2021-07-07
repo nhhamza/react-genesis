@@ -11,9 +11,10 @@ const PAGE_DEFAULT = 1;
 
 const SearchResults = () => {
   const { query } = useParams();
-  const [drinks, setDrinks] = useState([]);
+  const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(PAGE_DEFAULT);
+
   const fetchData = () => {
     if (isLoading) {
       return;
@@ -23,16 +24,17 @@ const SearchResults = () => {
 
     getSearchData(query, currentPage, PAGE_SIZE).then(response => {
       if (currentPage === 1) {
-        setDrinks(response.data);
+        setResults(response.data);
       } else {
-        const items = drinks.concat(response.data);
-        setDrinks(...[items]);
+        const items = results.concat(response.data);
+        setResults(...[items]);
       }
       setIsLoading(false);
     });
   };
+
   useEffect(() => {
-    setDrinks([]);
+    setResults([]);
     setCurrentPage(PAGE_DEFAULT);
   }, [query]);
 
@@ -41,7 +43,7 @@ const SearchResults = () => {
   }, []);
 
   const getCard = drink => (
-    <div className="result__container__card">
+    <div title="result__container__card" className="result__container__card">
       <div>
         <img
           className="result__container__card__image"
@@ -65,9 +67,8 @@ const SearchResults = () => {
   return (
     <>
       {isLoading && <LinearProgress />}
-
-      <div className="result__summary"></div>
-      {drinks.map(drink => getCard(drink))}
+      <div title="result__summary" className="result__summary"></div>
+      {results.map(drink => getCard(drink))}
     </>
   );
 };
