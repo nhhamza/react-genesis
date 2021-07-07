@@ -14,11 +14,11 @@ const Search = () => {
         </div>
       </div>
       <div className="inputDiv">
-        <input type="text" placeholder="Numéro d'écrou ou nom" />
+        <input type="text" placeholder={t.search.placeholder} />
       </div>
       <div className="logos">
-        <img src={logoMJ} alt="logo-ministère-justice" />
-        <img src={logoDAP} alt="logo-dap" />
+        <img src={logoMJ} alt={t.search.altLogoMJ} />
+        <img src={logoDAP} alt={t.search.altLogoDAP} />
       </div>
     </div>
   );
