@@ -7,30 +7,29 @@
     position: absolute;
     width: 100%;
     top: 35%;
-    &_text {
+    &__text {
         text-align: center;
         font-weight: bold;
     }
 }
-.logos {
+.logo-container {
     width: 90%;
     position: absolute;
     bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    > img {
+    &__img {
         align-self: center;
     }
 }
-
-.inputDiv {
+.input-component {
     position: absolute;
     width: 100%;
     top: 50%;
     display: flex;
     justify-content: center;
-    > input {
+    &__input {
         background: #FFFFFF;
         border: none;
         width: 80%;
