@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import './style.scss';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { LinearProgress } from '@material-ui/core';
 import { getSearchData } from '../../Repository/SearchResult/SearchResult';
 
 const PAGE_SIZE = 2;
@@ -63,6 +64,8 @@ const SearchResults = () => {
   );
   return (
     <>
+      {isLoading && <LinearProgress />}
+
       <div className="result__summary"></div>
       {drinks.map(drink => getCard(drink))}
     </>
