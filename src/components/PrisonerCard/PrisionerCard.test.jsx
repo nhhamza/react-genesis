@@ -4,7 +4,11 @@ import PrisionerCard from './PrisionerCard.jsx';
 
 describe('PrisionerCard component', () => {
   const MOCK_PROPS = {
-    card: { id: 'id', title: 'title' }
+    card: {
+      id: 'id',
+      title: 'title',
+      creator: {}
+    }
   };
 
   const wrapper = shallow(<PrisionerCard {...MOCK_PROPS} />);
