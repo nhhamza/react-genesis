@@ -11,6 +11,12 @@ export default new LocalizedStrings({
     searchResults: {
       results: 'RESULTS : '
     },
-    client: {}
+    client: {},
+    search: {
+      title: 'Livret du détenu',
+      placeholder: "Numéro d'écrou ou nom",
+      altLogoMJ: 'logo-ministère-justice',
+      altLogoDAP: 'logo-dap'
+    }
   }
 });
