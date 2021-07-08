@@ -1,4 +1,4 @@
-# drinks
+# Genesis
 
 ## Install requirements
 

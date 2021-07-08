@@ -142,6 +142,7 @@
     "react-router-dom": "^5.1.2",
     "react-router-redux": "^4.0.8",
     "react-sortable-hoc": "^1.11.0",
+    "react-use": "^17.2.4",
     "react-widgets": "^4.4.11",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
