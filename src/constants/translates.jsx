@@ -13,10 +13,16 @@ export default new LocalizedStrings({
     },
     client: {},
     search: {
-      title: 'Livret du détenu',
-      placeholder: "Numéro d'écrou ou nom",
       altLogoMJ: 'logo-ministère-justice',
-      altLogoDAP: 'logo-dap'
+      altLogoDAP: 'logo-dap',
+      buttonLabel: 'Scanner QR code',
+      placeholder: "Numéro d'écrou ou nom",
+      searchByCellNumber: 'UGC',
+      searchByCellNumberValue: 'UGC',
+      searchByInmate: 'Détenu',
+      searchByInmateValue: 'detenu',
+      searchContainerText: 'ou',
+      title: 'Livret du détenu'
     }
   }
 });
