@@ -3,7 +3,7 @@ export const VERSIONS = {
 };
 
 export const PATHS = {
-  searchResults: 'drinks'
+  searchResults: 'search'
 };
 
 export const API_ROUTES = {

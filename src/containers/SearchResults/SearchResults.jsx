@@ -15,48 +15,41 @@ const SearchResults = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(PAGE_DEFAULT);
 
-  const fetchData = () => {
-    if (isLoading) {
-      return;
-    }
-    setIsLoading(true);
-    setCurrentPage(currentPage + 1);
-
-    getSearchData(query, currentPage, PAGE_SIZE).then(response => {
-      if (currentPage === 1) {
-        setResults(response.data);
-      } else {
-        const items = results.concat(response.data);
-        setResults(...[items]);
-      }
-      setIsLoading(false);
-    });
-  };
-
   useEffect(() => {
     setResults([]);
     setCurrentPage(PAGE_DEFAULT);
   }, [query]);
 
   useEffect(() => {
-    fetchData();
+    const getData = async () => {
+      setIsLoading(true);
+      const dataResults = await getSearchData(query, currentPage, PAGE_SIZE);
+      setResults(dataResults?.data);
+
+      setIsLoading(false);
+    };
+    getData();
   }, []);
 
-  const getCard = drink => (
-    <div title="result__container__card" className="result__container__card">
+  const getCard = card => (
+    <div
+      key={card.id}
+      title="result__container__card"
+      className="result__container__card"
+    >
       <div>
         <img
           className="result__container__card__image"
-          src={drink?.creator?.avatarUrl}
-          alt={drink.title}
+          src={card?.creator?.avatarUrl}
+          alt={card.title}
         />
       </div>
       <div className="result__container__card__body">
         <div className="result__container__card__body__title">
-          {drink?.creator.name}
+          {card?.creator.name}
         </div>
         <div className="result__container__card__body__phone">
-          {drink?.creator.phone}
+          {card?.creator.phone}
         </div>
       </div>
       <div className="result__container__card__navigation">
@@ -68,7 +61,7 @@ const SearchResults = () => {
     <>
       {isLoading && <LinearProgress />}
       <div title="result__summary" className="result__summary"></div>
-      {results.map(drink => getCard(drink))}
+      {results.map(result => getCard(result))}
     </>
   );
 };
