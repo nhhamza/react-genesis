@@ -1,5 +1,5 @@
 .result__container__card {
-  height: 62px;
+  height: 82px;
   background: #ffffff;
   border-radius: 8px;
   margin: 10px 0px;
@@ -25,6 +25,12 @@
       font-size: 14px;
       line-height: 18px;
       color: #445062;
+    }
+    &__date {
+      font-size: 14px;
+      line-height: 18px;
+      color: #445062;
+      padding: 10px 0 0;
     }
   }
   &__navigation {

@@ -17,12 +17,13 @@ const CardPrisioner = ({ card }) => {
         />
       </div>
       <div className="result__container__card__body">
-        <div className="result__container__card__body__title">
-          {card?.creator.name}
-        </div>
         <div className="result__container__card__body__phone">
           {card?.creator.phone}
         </div>
+        <div className="result__container__card__body__title">
+          {card?.creator.name}
+        </div>
+        <div className="result__container__card__body__date">{card?.date}</div>
       </div>
       <div className="result__container__card__navigation">
         <ArrowForwardIosIcon fontSize="small" />
